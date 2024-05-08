@@ -1,7 +1,7 @@
 package main
 
 import (
-  // "log"
+  "log"
   // "net/http"
   "github.com/armon/go-socks5"
 )
@@ -15,6 +15,8 @@ func main() {
   }
 
   // Create SOCKS5 proxy on localhost port 8000
+  log.Printf("sock5 proxy listen on: %s", "8080")
+
   if err := server.ListenAndServe("tcp", "0.0.0.0:8080"); err != nil {
     panic(err)
   }
